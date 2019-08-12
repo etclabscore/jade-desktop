@@ -1,7 +1,7 @@
 import { menubar } from "menubar";
 import * as path from "path";
 
-// import { startServiceRunner, ConnectionInfo } from "@etclabscore/jade-service-runner";
+import { startServiceRunner, ConnectionInfo } from "@etclabscore/jade-service-runner";
 
 const mb = menubar({
   index: process.env.NODE_ENV === "development"
@@ -10,11 +10,11 @@ const mb = menubar({
 });
 
 mb.on("ready", () => {
-  // startServiceRunner(new Set<ConnectionInfo>([{
-  //   host: "localhost",
-  //   port: 8002,
-  //   protocol: "http",
-  // }]), "./services/").then(() => {
-  //   console.log("app is ready") //tslint:disable-line
-  // });
+  startServiceRunner(new Set<ConnectionInfo>([{
+    host: "localhost",
+    port: 8002,
+    protocol: "http",
+  }]), "./services/").then(() => {
+    console.log("app is ready") //tslint:disable-line
+  });
 });

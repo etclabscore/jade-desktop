@@ -6,7 +6,7 @@
   "main": "build/electron.js",
   "scripts": {
     "build": "react-scripts build",
-    "build:electron": "tsc electron/electron.ts --outDir build",
+    "build:electron": "tsc electron/electron.ts --esModuleInterop true --outDir build",
     "start": "react-scripts start",
     "version": "cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]'",
     "electron": "npm run build:electron && NODE_ENV=development electron build/electron.js",
