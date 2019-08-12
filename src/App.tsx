@@ -5,9 +5,6 @@ import useDarkMode from "use-dark-mode";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
 import { ThemeProvider } from "@material-ui/styles";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
-import PlayArrow from "@material-ui/icons/PlayArrow";
-import Stop from "@material-ui/icons/Stop";
-import Unarchive from "@material-ui/icons/Unarchive";
 import { darkTheme, lightTheme } from "./themes/jadeTheme";
 import "./App.css";
 
@@ -37,12 +34,12 @@ const App: React.FC = () => {
     if (serviceRunnerClient) {
       serviceRunnerClient.listRunningServices().then(setRunningServices);
     }
-  }, [services]);
+  }, [services, serviceRunnerClient]);
   useEffect(() => {
     if (serviceRunnerClient) {
       serviceRunnerClient.listInstalledServices().then(setInstalledServices);
     }
-  }, [services]);
+  }, [services, serviceRunnerClient]);
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -75,10 +72,30 @@ const App: React.FC = () => {
             </Grid>
           </Toolbar>
         </AppBar>
+        <Grid container justify="space-around" style={{marginBottom: "-20px"}}>
+          <Card style={{background: "transparent"}}>
+            <CardContent>
+              <Typography variant="h6">Available</Typography>
+              <Typography variant="h3">{services ? services.length : 0}</Typography>
+            </CardContent>
+          </Card>
+          <Card style={{background: "transparent"}}>
+            <CardContent>
+              <Typography variant="h6">Installed</Typography>
+              <Typography variant="h3">{installedServices ? installedServices.length : 0}</Typography>
+            </CardContent>
+          </Card>
+          <Card style={{background: "transparent"}}>
+            <CardContent>
+              <Typography variant="h6">Running</Typography>
+              <Typography variant="h3">{runningServices ? runningServices.length : 0}</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
         <div>
           {services.map((service) => {
             return (
-              <Card>
+              <Card style={{background: "transparent"}}>
                 <CardContent>
                   <Typography variant="h6">{service.name}</Typography>
                   <Chip label={service.version} />
@@ -94,8 +111,8 @@ const App: React.FC = () => {
                             <>
                               {
                                 runningService
-                                  ? <Stop />
-                                  : <PlayArrow />
+                                  ? "Running"
+                                  : "Not Running"
                               }
                             </>
                           </ListItemIcon>
