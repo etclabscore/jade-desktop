@@ -1,0 +1,43 @@
+{
+  "tagFormat": "${version}",
+  "branch": "master",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/git"
+  ],
+  "verifyConditions": [
+    "@semantic-release/changelog",
+    "@semantic-release/git",
+    "@semantic-release/github"
+  ],
+  "publish": [
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "path": "dist/*.tar.gz",
+            "label": "electron-pristine-linux.tar.gz"
+          },
+          {
+            "path": "dist/electron-pristine-mac*.dmg",
+            "label": "electron-pristine-mac.dmg"
+          },
+          {
+            "path": "dist/*.exe",
+            "label": "electron-pristine-windows.exe"
+          }
+        ]
+      }
+    ]
+  ],
+  "success": [
+    "@semantic-release/github"
+  ],
+  "fail": [
+    "@semantic-release/github"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "name": "@etclabscore/pristine-typescript-electron-menubar",
+  "version": "0.0.0-development",
+  "description": "",
+  "homepage": ".",
+  "main": "build/electron.js",
+  "scripts": {
+    "build": "react-scripts build",
+    "build:electron": "tsc electron/electron.ts --outDir build",
+    "start": "react-scripts start",
+    "version": "cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]'",
+    "electron": "npm run build:electron && NODE_ENV=development electron build/electron.js",
+    "electron:build": "npm run build:electron && electron-builder --publish never",
+    "lint": "tslint --fix -p .",
+    "test": "npm run lint && jest --coverage --passWithNoTests"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.6.8",
+    "@types/react": "^16.8.20",
+    "@types/react-dom": "^16.8.4",
+    "electron": "^5.0.4",
+    "electron-builder": "^20.43.0",
+    "jest": "^24.7.1",
+    "react-scripts": "^3.0.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.1"
+  },
+  "dependencies": {
+    "@etclabscore/jade-service-runner": "^1.3.0",
+    "@qiwi/semantic-release-gh-pages-plugin": "^1.10.3",
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/commit-analyzer": "^6.2.0",
+    "@semantic-release/git": "^7.0.12",
+    "@semantic-release/github": "^5.4.0",
+    "@semantic-release/npm": "^5.1.9",
+    "@semantic-release/release-notes-generator": "^7.2.0",
+    "menubar": "^6.0.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "semantic-release": "^15.13.20"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "productName": "electron-pristine",
+    "appId": "electron.pristine.etclabscore",
+    "artifactName": "${productName}-${os}-${arch}-${env.APP_VERSION_GIT_TAG}.${ext}",
+    "compression": "normal",
+    "asar": true,
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "linux": {
+      "target": [
+        "tar.gz"
+      ]
+    },
+    "dmg": {
+      "iconSize": 128,
+      "contents": [
+        {
+          "x": 180,
+          "y": 190
+        },
+        {
+          "x": 380,
+          "y": 190,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  }
+}
