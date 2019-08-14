@@ -126,7 +126,7 @@ const App: React.FC = () => {
                           <Chip label={service.version} />
                           {
                             downloadingService ?
-                              <CircularProgress style={{marginTop: "5px"}}/>
+                              <CircularProgress style={{ marginTop: "5px" }} />
                               :
                               installedService ?
                                 null
@@ -147,7 +147,17 @@ const App: React.FC = () => {
                       });
                       return (
                         <ListItem>
-                          <ListItemText primary={e} />
+                          <ListItemText primary={e} secondary={
+                            <>
+                              {
+                                runningService
+                                  ? <Typography variant="caption" style={{ display: "block", fontSize: "8px" }}>
+                                    {`http://localhost:8002/${service.name}/${e}/${service.version}`}
+                                  </Typography>
+                                  : null
+                              }
+                            </>
+                          } />
                           <ListItemIcon>
                             <>
                               <Button disabled>
