@@ -1,6 +1,6 @@
 import { menubar } from "menubar";
 import * as path from "path";
-import { ipcMain, BrowserWindow } from "electron";
+import { ipcMain } from "electron";
 
 import { startServiceRunner, ConnectionInfo, ServiceRunnerServer } from "@etclabscore/jade-service-runner";
 
@@ -12,7 +12,7 @@ const mb = menubar({
     webPreferences: {
       nodeIntegration: true,
     },
-  }
+  },
 });
 
 mb.on("ready", () => {

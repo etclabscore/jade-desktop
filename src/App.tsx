@@ -126,7 +126,7 @@ const App: React.FC = () => {
                           <Chip label={service.version} />
                           {
                             downloadingService ?
-                              <CircularProgress />
+                              <CircularProgress style={{marginTop: "5px"}}/>
                               :
                               installedService ?
                                 null
