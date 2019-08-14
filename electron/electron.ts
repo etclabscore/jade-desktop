@@ -13,6 +13,7 @@ const mb = menubar({
       nodeIntegration: true,
     },
   },
+  icon: path.join(__dirname, "../assets/IconTemplate.png"),
 });
 
 mb.on("ready", () => {

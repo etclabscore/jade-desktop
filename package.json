@@ -71,6 +71,7 @@
     "asar": true,
     "files": [
       "build/**/*",
+      "assets/**/*",
       "node_modules/**/*"
     ],
     "directories": {
