@@ -5,18 +5,20 @@
   "homepage": ".",
   "main": "build/electron.js",
   "scripts": {
-    "build": "react-scripts build",
+    "build": "rescripts build",
     "build:electron": "tsc electron/electron.ts --esModuleInterop true --outDir build",
-    "start": "react-scripts start",
+    "start": "rescripts start",
     "version": "cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]'",
     "electron": "npm run build:electron && NODE_ENV=development electron build/electron.js",
     "electron:build": "npm run build:electron && electron-builder --publish never",
     "lint": "tslint --fix -p .",
-    "test": "npm run lint && jest --coverage --passWithNoTests"
+    "test": "npm run lint && rescripts test --coverage --passWithNoTests"
   },
   "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@rescripts/cli": "0.0.11",
+    "@rescripts/rescript-env": "0.0.10",
     "@types/jest": "^24.0.13",
     "@types/node": "^12.6.8",
     "@types/react": "^16.8.20",
@@ -36,6 +38,7 @@
     "@material-ui/icons": "^4.2.1",
     "@material-ui/styles": "^4.3.0",
     "@qiwi/semantic-release-gh-pages-plugin": "^1.10.3",
+    "@rooks/use-interval": "^3.2.2",
     "@semantic-release/changelog": "^3.0.4",
     "@semantic-release/commit-analyzer": "^6.2.0",
     "@semantic-release/git": "^7.0.12",
@@ -96,5 +99,8 @@
         }
       ]
     }
-  }
+  },
+  "rescripts": [
+    "env"
+  ]
 }
