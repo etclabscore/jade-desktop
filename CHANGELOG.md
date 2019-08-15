@@ -1,3 +1,22 @@
+# 1.0.0 (2019-08-15)
+
+
+### Bug Fixes
+
+* add icons ([bb28d0d](https://github.com/etclabscore/jade-service-runner-ui/commit/bb28d0d))
+* add running state numbers dashboard ([2cf736c](https://github.com/etclabscore/jade-service-runner-ui/commit/2cf736c))
+* electron typescript build ([8b6670a](https://github.com/etclabscore/jade-service-runner-ui/commit/8b6670a))
+* **README:** add initial readme ([2166ed0](https://github.com/etclabscore/jade-service-runner-ui/commit/2166ed0))
+* linting ([56300b6](https://github.com/etclabscore/jade-service-runner-ui/commit/56300b6))
+* linting + progress padding ([ba3112c](https://github.com/etclabscore/jade-service-runner-ui/commit/ba3112c))
+
+
+### Features
+
+* add initial ui ([0adfdc2](https://github.com/etclabscore/jade-service-runner-ui/commit/0adfdc2))
+* add ipc for stop command + download feature ([842c91a](https://github.com/etclabscore/jade-service-runner-ui/commit/842c91a))
+* add service location to list ([4ddeb0b](https://github.com/etclabscore/jade-service-runner-ui/commit/4ddeb0b))
+
 ## [1.0.10](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.9...1.0.10) (2019-06-20)
 
 
