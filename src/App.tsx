@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AppBar, Typography, CssBaseline, Grid, Toolbar, IconButton, Card, CardContent, Chip, List, ListItem, ListItemIcon, ListItemText, CardHeader, Avatar, Button, CircularProgress } from "@material-ui/core"; //tslint:disable-line
+import { AppBar, Typography, CssBaseline, Grid, Toolbar, IconButton, Card, CardContent, Chip, List, ListItem, ListItemIcon, ListItemText, CardHeader, Button, CircularProgress, Link } from "@material-ui/core"; //tslint:disable-line
 import ServiceRunnerClient from "@etclabscore/jade-service-runner-client";
 import useDarkMode from "use-dark-mode";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
@@ -44,13 +44,14 @@ const App: React.FC = () => {
     }));
   }, []);
 
-  const { start, stop } = useInterval(() => {
+  useInterval(() => {
     if (serviceRunnerClient) {
       serviceRunnerClient.listServices("available").then(setServices);
       serviceRunnerClient.listServices("running").then(setRunningServices);
       serviceRunnerClient.listServices("installed").then(setInstalledServices);
     }
   }, 1000, true);
+
   function handleStart(name: string, version: string, env: string) {
     if (serviceRunnerClient) {
       serviceRunnerClient.startService(name, version, env);
@@ -147,7 +148,9 @@ const App: React.FC = () => {
                       });
                       return (
                         <ListItem>
-                          <ListItemText primary={e} secondary={
+                          <ListItemText primary={
+                            <Link target="_blank" href={`https://playground.open-rpc.org?schemaUrl=http://localhost:8002/${service.name}/${e}/${service.version}&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:title]=${e}&uiSchema[appBar][ui:darkMode]=${darkMode.value}`}>{e}</Link> //tslint:disable-line
+                          } secondary={ //tslint:disable-line
                             <>
                               {
                                 runningService
