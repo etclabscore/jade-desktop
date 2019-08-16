@@ -126,13 +126,11 @@ const App: React.FC = () => {
                         <Grid container direction="column" alignItems="flex-end">
                           <Chip label={service.version} />
                           {
-                            downloadingService ?
-                              <CircularProgress style={{ marginTop: "5px" }} />
-                              :
-                              installedService ?
-                                null
-                                :
-                                <IconButton onClick={() => handleInstallService(service.name, service.version)}>
+                            downloadingService
+                              ? <CircularProgress style={{ marginTop: "5px" }} />
+                              : installedService
+                                ? null
+                                : <IconButton onClick={() => handleInstallService(service.name, service.version)}>
                                   <CloudDownload />
                                 </IconButton>
                           }
@@ -150,7 +148,7 @@ const App: React.FC = () => {
                         <ListItem>
                           <ListItemText primary={
                             <Link target="_blank" href={`https://playground.open-rpc.org?schemaUrl=http://localhost:8002/${service.name}/${e}/${service.version}&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:title]=${e}&uiSchema[appBar][ui:darkMode]=${darkMode.value}`}>{e}</Link> //tslint:disable-line
-                          } secondary={ //tslint:disable-line
+                          } secondary={
                             <>
                               {
                                 runningService

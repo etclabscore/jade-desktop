@@ -9,7 +9,7 @@
     "build:electron": "tsc electron/electron.ts --esModuleInterop true --outDir build",
     "start": "rescripts start",
     "version": "cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]'",
-    "electron": "npm run build:electron && NODE_ENV=development electron build/electron.js",
+    "electron": "npm run build:electron && NODE_ENV=development electron --inspect=5858 build/electron.js",
     "electron:build": "npm run build:electron && electron-builder --publish never",
     "lint": "tslint --fix -p .",
     "test": "npm run lint && rescripts test --coverage --passWithNoTests"
@@ -37,18 +37,11 @@
     "@material-ui/core": "^4.3.2",
     "@material-ui/icons": "^4.2.1",
     "@material-ui/styles": "^4.3.0",
-    "@qiwi/semantic-release-gh-pages-plugin": "^1.10.3",
     "@rooks/use-interval": "^3.2.2",
-    "@semantic-release/changelog": "^3.0.4",
-    "@semantic-release/commit-analyzer": "^6.2.0",
-    "@semantic-release/git": "^7.0.12",
-    "@semantic-release/github": "^5.4.0",
-    "@semantic-release/npm": "^5.1.9",
-    "@semantic-release/release-notes-generator": "^7.2.0",
+    "electron-log": "^3.0.7",
     "menubar": "^6.0.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "semantic-release": "^15.13.20",
     "use-dark-mode": "^2.3.1"
   },
   "browserslist": {
