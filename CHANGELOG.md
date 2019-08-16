@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/etclabscore/jade-service-runner-ui/compare/1.0.4...1.0.5) (2019-08-16)
+
+
+### Bug Fixes
+
+* only show playground link for running services ([e57bb6b](https://github.com/etclabscore/jade-service-runner-ui/commit/e57bb6b))
+
 ## [1.0.4](https://github.com/etclabscore/jade-service-runner-ui/compare/1.0.3...1.0.4) (2019-08-16)
 
 
