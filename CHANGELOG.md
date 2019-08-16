@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/etclabscore/jade-service-runner-ui/compare/1.0.1...1.0.2) (2019-08-16)
+
+
+### Bug Fixes
+
+* userData path for services ([d6fe2dd](https://github.com/etclabscore/jade-service-runner-ui/commit/d6fe2dd))
+* **electron:** icon and productName ([1a9ae1f](https://github.com/etclabscore/jade-service-runner-ui/commit/1a9ae1f))
+* **releaserc:** replace default asset names ([7ec6be0](https://github.com/etclabscore/jade-service-runner-ui/commit/7ec6be0))
+
 ## [1.0.1](https://github.com/etclabscore/jade-service-runner-ui/compare/1.0.0...1.0.1) (2019-08-16)
 
 
