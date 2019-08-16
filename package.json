@@ -57,8 +57,8 @@
     ]
   },
   "build": {
-    "productName": "electron-pristine",
-    "appId": "electron.pristine.etclabscore",
+    "productName": "jade-service-runner-ui",
+    "appId": "service-runner-ui.jade.etclabscore",
     "artifactName": "${productName}-${os}-${arch}-${env.APP_VERSION_GIT_TAG}.${ext}",
     "compression": "normal",
     "asar": true,
