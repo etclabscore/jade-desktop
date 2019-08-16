@@ -20,15 +20,15 @@
         "assets": [
           {
             "path": "dist/*.tar.gz",
-            "label": "electron-pristine-linux.tar.gz"
+            "label": "jade-service-runner.tar.gz"
           },
           {
             "path": "dist/electron-pristine-mac*.dmg",
-            "label": "electron-pristine-mac.dmg"
+            "label": "jade-service-runner-mac.dmg"
           },
           {
             "path": "dist/*.exe",
-            "label": "electron-pristine-windows.exe"
+            "label": "jade-service-runner-windows.exe"
           }
         ]
       }
