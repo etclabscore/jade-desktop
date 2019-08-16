@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/etclabscore/jade-service-runner-ui/compare/1.0.2...1.0.3) (2019-08-16)
+
+
+### Bug Fixes
+
+* **releaserc:** mac build glob path ([4d69a8a](https://github.com/etclabscore/jade-service-runner-ui/commit/4d69a8a))
+
 ## [1.0.2](https://github.com/etclabscore/jade-service-runner-ui/compare/1.0.1...1.0.2) (2019-08-16)
 
 
