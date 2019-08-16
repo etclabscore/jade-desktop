@@ -147,7 +147,9 @@ const App: React.FC = () => {
                       return (
                         <ListItem>
                           <ListItemText primary={
-                            <Link target="_blank" href={`https://playground.open-rpc.org?schemaUrl=http://localhost:8002/${service.name}/${e}/${service.version}&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:title]=${e}&uiSchema[appBar][ui:darkMode]=${darkMode.value}`}>{e}</Link> //tslint:disable-line
+                            runningService
+                              ? <Link target="_blank" href={`https://playground.open-rpc.org?schemaUrl=http://localhost:8002/${service.name}/${e}/${service.version}&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:title]=${e}&uiSchema[appBar][ui:darkMode]=${darkMode.value}`}>{e}</Link> //tslint:disable-line
+                              : e
                           } secondary={
                             <>
                               {
