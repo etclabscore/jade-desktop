@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/etclabscore/jade-service-runner-ui/compare/1.0.0...1.0.1) (2019-08-16)
+
+
+### Bug Fixes
+
+* add logging + fix services directory ([88cec1c](https://github.com/etclabscore/jade-service-runner-ui/commit/88cec1c))
+* deps ([1d7c8ce](https://github.com/etclabscore/jade-service-runner-ui/commit/1d7c8ce))
+
 # 1.0.0 (2019-08-15)
 
 
