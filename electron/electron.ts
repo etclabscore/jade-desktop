@@ -26,7 +26,7 @@ mb.on("ready", () => {
     host: "localhost",
     port: 8002,
     protocol: "http",
-  }]), mb.app.getPath("userData")).then((sr: ServiceRunnerServer) => {
+  }]), path.resolve(mb.app.getPath("home"), ".services")).then((sr: ServiceRunnerServer) => {
     log.debug("Service Runner Server Started", JSON.stringify(sr.config, null, 2));
     ipcMain.on("service-runner-jsonrpc", async (event, arg) => {
       log.debug("service-runner-jsonrpc request", arg);
