@@ -23,7 +23,7 @@
             "label": "jade-service-runner.tar.gz"
           },
           {
-            "path": "dist/electron-pristine-mac*.dmg",
+            "path": "dist/*.dmg",
             "label": "jade-service-runner-mac.dmg"
           },
           {
