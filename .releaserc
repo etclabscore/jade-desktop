@@ -23,7 +23,7 @@
             "label": "jade-service-runner.tar.gz"
           },
           {
-            "path": "dist/*.dmg",
+            "path": "dist/jade-service-runner-ui-mac*.dmg",
             "label": "jade-service-runner-mac.dmg"
           },
           {
