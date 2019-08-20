@@ -28,6 +28,12 @@ Service Runner improves the dApp development cycle, by reducing the number of st
 - `npm run electron`
 
 
+### Extended Config
+
+A away to extend services, see [here](https://github.com/etclabscore/jade-service-runner/#extending-services) for more info.
+
+`jade-service-runner-ui.app/Contents/MacOS/jade-service-runner-ui -c my-extended-config.json`
+
 ### Contributing
 
 How to contribute, build and release are outlined in [CONTRIBUTING.md](CONTRIBUTING.md), [BUILDING.md](BUILDING.md) and [RELEASING.md](RELEASING.md) respectively. Commits in this repository follow the [CONVENTIONAL_COMMITS.md](CONVENTIONAL_COMMITS.md) specification.
