@@ -1,3 +1,11 @@
+## [1.0.7](https://github.com/etclabscore/jade-service-runner-ui/compare/1.0.6...1.0.7) (2019-08-20)
+
+
+### Bug Fixes
+
+* add extended config ([5bab4e9](https://github.com/etclabscore/jade-service-runner-ui/commit/5bab4e9)), closes [#2](https://github.com/etclabscore/jade-service-runner-ui/issues/2)
+* **electron:** link window ([37fc5f8](https://github.com/etclabscore/jade-service-runner-ui/commit/37fc5f8))
+
 ## [1.0.6](https://github.com/etclabscore/jade-service-runner-ui/compare/1.0.5...1.0.6) (2019-08-16)
 
 
