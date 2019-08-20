@@ -1,6 +1,6 @@
 import { menubar } from "menubar";
 import * as path from "path";
-import { ipcMain } from "electron";
+import { ipcMain, BrowserWindow } from "electron";
 import log from "electron-log";
 
 import { startServiceRunner, ConnectionInfo, ServiceRunnerServer } from "@etclabscore/jade-service-runner";
@@ -23,11 +23,20 @@ const mb = menubar({
 mb.on("ready", () => {
   let extendedConfig;
   if (process.argv[1] === "-c" && process.argv[1]) {
-    extendedConfig = readFileSync(`${process.cwd()}/${process.argv[2]}`, "utf8") ;
+    extendedConfig = readFileSync(`${process.cwd()}/${process.argv[2]}`, "utf8");
     extendedConfig = JSON.parse(extendedConfig);
   }
 
   log.info("App Ready");
+
+  mb.on("after-create-window", () => {
+    mb.window.webContents.on("new-window", (e, url) => {
+      e.preventDefault();
+      const win = new BrowserWindow({ width: 800, height: 600 });
+      win.loadURL(url);
+    });
+  });
+
   startServiceRunner(new Set<ConnectionInfo>([{
     host: "localhost",
     port: 8002,
