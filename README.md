@@ -24,6 +24,7 @@ Service Runner improves the dApp development cycle, by reducing the number of st
 
 ### Development
 
+- `npm install .`
 - `npm start`
 - `npm run electron`
 
