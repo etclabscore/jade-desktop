@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/etclabscore/jade-service-runner-ui/compare/1.0.7...1.1.0) (2019-09-03)
+
+
+### Bug Fixes
+
+* upgrade service runner to bump multi-geth ([55f67c9](https://github.com/etclabscore/jade-service-runner-ui/commit/55f67c9))
+
+
+### Features
+
+* **doc:** add install step to development section ([98406ba](https://github.com/etclabscore/jade-service-runner-ui/commit/98406ba))
+
 ## [1.0.7](https://github.com/etclabscore/jade-service-runner-ui/compare/1.0.6...1.0.7) (2019-08-20)
 
 
