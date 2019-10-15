@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AppBar, Typography, CssBaseline, Grid, Toolbar, IconButton, Card, CardContent, Chip, List, ListItem, ListItemIcon, ListItemText, CardHeader, Button, CircularProgress, Link } from "@material-ui/core"; //tslint:disable-line
-import ServiceRunnerClient from "@etclabscore/jade-service-runner-client";
+import ServiceRunnerClient, { ObjectDBzoJtf4 as Environment } from "@etclabscore/jade-service-runner-client";
 import useDarkMode from "use-dark-mode";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
 import { ThemeProvider } from "@material-ui/styles";
@@ -140,26 +140,36 @@ const App: React.FC = () => {
                     </CardHeader>
                   </Card>
                   {installedService && <List component="nav" aria-label="main list services">
-                    {service.environments.map((e: any) => {
+                    {service.environments.map((e: Environment) => {
                       const runningService = runningServices.find((s) => {
-                        return s.name === service.name && s.environments.includes(e);
+                        return s.name === service.name &&
+                          s.environments.find((env: Environment) => e.name === env.name);
                       });
                       return (
                         <ListItem>
                           <ListItemText primary={
-                            runningService
-                              ? <Link target="_blank" href={`https://playground.open-rpc.org?schemaUrl=http://localhost:8002/${service.name}/${e}/${service.version}&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:title]=${e}&uiSchema[appBar][ui:darkMode]=${darkMode.value}`}>{e}</Link> //tslint:disable-line
-                              : e
-                          } secondary={
-                            <>
+                            <div>
                               {
                                 runningService
-                                  ? <Typography variant="caption" style={{ display: "block", fontSize: "8px" }}>
-                                    {`http://localhost:8002/${service.name}/${e}/${service.version}`}
-                                  </Typography>
-                                  : null
+                                  ? <Link target="_blank" href={`https://playground.open-rpc.org?schemaUrl=http://localhost:8002/${service.name}/${e.name}/${service.version}&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:title]=${e.name}&uiSchema[appBar][ui:darkMode]=${darkMode.value}`}>{e.name}</Link> //tslint:disable-line
+                                  : e.name
                               }
-                            </>
+                            </div>
+                          } secondary={
+                            <div>
+                              <div>
+                                <Typography variant="caption">{e.summary}</Typography>
+                              </div>
+                              <div>
+                                {
+                                  runningService
+                                    ? <Typography variant="caption" style={{ display: "block", fontSize: "8px" }}>
+                                      {`http://localhost:8002/${service.name}/${e.name}/${service.version}`}
+                                    </Typography>
+                                    : null
+                                }
+                              </div>
+                            </div>
                           } />
                           <ListItemIcon>
                             <>
@@ -167,7 +177,7 @@ const App: React.FC = () => {
                                 {
                                   runningService
                                     ? "Running"
-                                    : "Not Running"
+                                    : "Stopped"
                                 }
                               </Button>
                               {
@@ -177,10 +187,14 @@ const App: React.FC = () => {
                                     params: [
                                       service.name,
                                       service.version,
-                                      e,
+                                      e.name,
                                     ],
                                   })}>Stop</Button>
-                                  : <Button onClick={() => handleStart(service.name, service.version, e)}>Start</Button>
+                                  : <>
+                                    <Button onClick={() => handleStart(service.name, service.version, e.name)}>
+                                      Start
+                                    </Button>
+                                  </>
                               }
                             </>
                           </ListItemIcon>
