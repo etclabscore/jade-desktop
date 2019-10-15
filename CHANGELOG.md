@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/etclabscore/jade-service-runner-ui/compare/1.1.0...1.1.1) (2019-10-15)
+
+
+### Bug Fixes
+
+* add service descriptions ([050fece](https://github.com/etclabscore/jade-service-runner-ui/commit/050fece291320c3abf5ac9f6eb06b304419780ef))
+* update jade service runner to 1.7.0 ([5228013](https://github.com/etclabscore/jade-service-runner-ui/commit/522801376cee2daf32abc165145e596c8cb70b11))
+
 # [1.1.0](https://github.com/etclabscore/jade-service-runner-ui/compare/1.0.7...1.1.0) (2019-09-03)
 
 
