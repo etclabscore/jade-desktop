@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/etclabscore/jade-service-runner-ui/compare/1.1.1...1.1.2) (2019-10-18)
+
+
+### Bug Fixes
+
+* update jade service runner to 1.7.4 ([ed932c8](https://github.com/etclabscore/jade-service-runner-ui/commit/ed932c82605f6a4a3601861e23f4ea892f0c97fb)), closes [#66](https://github.com/etclabscore/jade-service-runner-ui/issues/66)
+
 ## [1.1.1](https://github.com/etclabscore/jade-service-runner-ui/compare/1.1.0...1.1.1) (2019-10-15)
 
 
