@@ -1,7 +1,7 @@
 # Jade Service Runner UI
 
 <p align="center">
-<img height="256" width="256" src="https://github.com/etclabscore/jade-media-assets/blob/master/jsr-ui/jsr-ui(PNG)/256x256.png?raw=true" />
+<a href="https://github.com/etclabscore/jade-service-runner-ui/releases/latest"><img height="256" width="256" src="https://github.com/etclabscore/jade-media-assets/blob/master/jsr-ui/jsr-ui(PNG)/256x256.png?raw=true" /></a>
 </p>
 
 <center>
