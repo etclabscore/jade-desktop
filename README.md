@@ -1,7 +1,7 @@
 # Jade Service Runner UI
 
 <p align="center">
-<img height="256" width="256" src="https://github.com/etclabscore/jade-media-assets/blob/master/jsr-gui/jsr-gui%20(PNG)/256x256.png?raw=true" />
+<img height="256" width="256" src="https://github.com/etclabscore/jade-media-assets/blob/master/jsr-ui/jsr-ui(PNG)/256x256.png?raw=true" />
 </p>
 
 <center>
