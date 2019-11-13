@@ -56,7 +56,7 @@ Download and install the latest binary for Windows, MacOS, or Linux [here](https
 - `npm run electron`
 
 ### Extended services
-A away to extend services, see [here](https://github.com/etclabscore/jade-service-runner/#extending-services) for more info.
+A way to extend services, see [here](https://github.com/etclabscore/jade-service-runner/#extending-services) for more info.
 
 ```
 jade-service-runner-ui.app/Contents/MacOS/jade-service-runner-ui -c my-extended-config.json
