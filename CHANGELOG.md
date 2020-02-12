@@ -1,3 +1,14 @@
+## [1.1.3](https://github.com/etclabscore/jade-desktop/compare/1.1.2...1.1.3) (2020-02-12)
+
+
+### Bug Fixes
+
+* change RUN IT img to link to release, fixes [#78](https://github.com/etclabscore/jade-desktop/issues/78) ([cb64b51](https://github.com/etclabscore/jade-desktop/commit/cb64b51b3c8460a5ac57d5916764aa0a88f081b9))
+* restructued readme content, this fixes [#60](https://github.com/etclabscore/jade-desktop/issues/60) ([7c0b98d](https://github.com/etclabscore/jade-desktop/commit/7c0b98dd5db1b9787398a61cb4b1ce3049feba3b))
+* **README:** away > way typo ([f8d65b2](https://github.com/etclabscore/jade-desktop/commit/f8d65b23c066ff3a8c20ce1820e07d47deaaa18d))
+* update jade service runner to latest ([0463a18](https://github.com/etclabscore/jade-desktop/commit/0463a181c0bb37a1110738a8805f6e009c1f490b))
+* updated img src for ui img ([ea5e327](https://github.com/etclabscore/jade-desktop/commit/ea5e3273323fff34a5861299e2ffb1f3d169e7a5))
+
 ## [1.1.2](https://github.com/etclabscore/jade-service-runner-ui/compare/1.1.1...1.1.2) (2019-10-18)
 
 
