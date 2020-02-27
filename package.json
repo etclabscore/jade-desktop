@@ -41,7 +41,7 @@
     "electron-log": "^3.0.7",
     "menubar": "^6.0.7",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.13.0",
     "react-markdown": "^4.2.2",
     "use-dark-mode": "^2.3.1"
   },
