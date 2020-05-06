@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/etclabscore/jade-desktop/compare/1.1.3...1.1.4) (2020-05-06)
+
+
+### Bug Fixes
+
+* update jade service runner ([193af7f](https://github.com/etclabscore/jade-desktop/commit/193af7f90ce185ddc3ae220bdc4af99821ebeb9b))
+
 ## [1.1.3](https://github.com/etclabscore/jade-desktop/compare/1.1.2...1.1.3) (2020-02-12)
 
 
