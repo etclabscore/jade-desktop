@@ -28,6 +28,7 @@
     "ts-jest": "^26.4.4",
     "tslint": "^5.17.0",
     "electron-builder": "^22.9.1",
+    "electron": "^11.0.3",
     "typescript": "^3.9.7"
   },
   "dependencies": {
@@ -37,7 +38,6 @@
     "@material-ui/icons": "^4.2.1",
     "@material-ui/styles": "^4.3.0",
     "@rooks/use-interval": "^3.2.2",
-    "electron": "^11.0.3",
     "electron-log": "^3.0.7",
     "menubar": "^6.0.7",
     "react": "^16.8.6",
