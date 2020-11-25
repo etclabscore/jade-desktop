@@ -1,3 +1,12 @@
+## [1.1.5](https://github.com/etclabscore/jade-desktop/compare/1.1.4...1.1.5) (2020-11-25)
+
+
+### Bug Fixes
+
+* move electron to devDependencies ([bf26c58](https://github.com/etclabscore/jade-desktop/commit/bf26c58d32fc71b8397438013c15050182e1fda2))
+* move electron-builder to devDependencies ([f7f6f07](https://github.com/etclabscore/jade-desktop/commit/f7f6f076da60431e5973386eccacc0738146cec0))
+* update service runner ([dc85fc6](https://github.com/etclabscore/jade-desktop/commit/dc85fc6068fb56c4ae3e8bb65bb994f09545b7af))
+
 ## [1.1.4](https://github.com/etclabscore/jade-desktop/compare/1.1.3...1.1.4) (2020-05-06)
 
 
