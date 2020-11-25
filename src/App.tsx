@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AppBar, Typography, CssBaseline, Grid, Toolbar, IconButton, Card, CardContent, Chip, List, ListItem, ListItemIcon, ListItemText, CardHeader, Button, CircularProgress, Link } from "@material-ui/core"; //tslint:disable-line
-import ServiceRunnerClient, { ObjectDBzoJtf4 as Environment } from "@etclabscore/jade-service-runner-client";
+import ServiceRunnerClient, { ObjectOfStringDoaGddGAStringDoaGddGAUnorderedSetOfObjectOfStringDoaGddGAStringDoaGddGAKieCSt44UIuKSje3U7AKQies as Environment } from "@etclabscore/jade-service-runner-client"; //tslint:disable-line
 import useDarkMode from "use-dark-mode";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
 import { ThemeProvider } from "@material-ui/styles";
@@ -142,8 +142,7 @@ const App: React.FC = () => {
                   {installedService && <List component="nav" aria-label="main list services">
                     {service.environments.map((e: Environment) => {
                       const runningService = runningServices.find((s) => {
-                        return s.name === service.name &&
-                          s.environments.find((env: Environment) => e.name === env.name);
+                        return s.name === service.name && e.name === s.environments.name;
                       });
                       return (
                         <ListItem>
@@ -151,7 +150,7 @@ const App: React.FC = () => {
                             <div>
                               {
                                 runningService
-                                  ? <Link target="_blank" href={`https://playground.open-rpc.org?schemaUrl=http://localhost:8002/${service.name}/${e.name}/${service.version}&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:title]=${e.name}&uiSchema[appBar][ui:darkMode]=${darkMode.value}`}>{e.name}</Link> //tslint:disable-line
+                                  ? <Link target="_blank" href={`https://playground.open-rpc.org?schemaUrl=http://localhost:8002/${service.name}/${e.name}/${service.version}&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:title]=${e.name}&uiSchema[appBar][ui:darkMode]=${darkMode.value}&uiSchema[appBar][ui:examplesDropdown]=false`}>{e.name}</Link> //tslint:disable-line
                                   : e.name
                               }
                             </div>

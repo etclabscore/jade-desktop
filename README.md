@@ -48,8 +48,6 @@ Download and install the latest binary for Windows, MacOS, or Linux [here](https
 <!-- example usage, screen shots, demos -->
 ## Usage
 
-![service_runner__1](https://user-images.githubusercontent.com/364566/63100364-cc15f200-bf2b-11e9-9698-12e05a8d0bd0.gif)
-
 ### Development
 - `npm install`
 - `npm start`
@@ -74,7 +72,7 @@ How to contribute, build and release are outlined in [CONTRIBUTING.md](CONTRIBUT
 Apache License 2.0
 
 <!-- references and additional resources  -->
-## Resources 
+## Resources
 - [jade.builders](https://jade.builders/)
 - [etclabscore/jade](https://github.com/etclabscore/jade)
 - [open-rpc](http://open-rpc.org)
