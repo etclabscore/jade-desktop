@@ -30,7 +30,7 @@ mb.on("ready", () => {
   log.info("App Ready");
 
   mb.on("after-create-window", () => {
-    mb.window.webContents.on("new-window", (e, url) => {
+    mb.window?.webContents.on("new-window", (e, url) => {
       e.preventDefault();
       const win = new BrowserWindow({ width: 800, height: 600 });
       win.loadURL(url);
@@ -43,7 +43,7 @@ mb.on("ready", () => {
     protocol: "http",
   }]), path.resolve(mb.app.getPath("home"), ".services"), extendedConfig).then((sr: ServiceRunnerServer) => {
     log.debug("Service Runner Server Started", JSON.stringify(sr.config, null, 2));
-    ipcMain.on("service-runner-jsonrpc", async (event, arg) => {
+    ipcMain.on("service-runner-jsonrpc", async (event: any, arg: any) => {
       log.debug("service-runner-jsonrpc request", arg);
       switch (arg.method) {
         case "stopService":
