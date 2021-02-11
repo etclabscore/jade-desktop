@@ -29,7 +29,7 @@
     "tslint": "^5.17.0",
     "electron-builder": "^22.9.1",
     "electron": "^11.0.3",
-    "typescript": "^3.9.7"
+    "typescript": "^4.1.5"
   },
   "dependencies": {
     "@etclabscore/jade-service-runner": "^1.10.5",
