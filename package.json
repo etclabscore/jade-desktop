@@ -28,7 +28,7 @@
     "ts-jest": "^26.4.4",
     "tslint": "^5.17.0",
     "electron-builder": "^22.9.1",
-    "electron": "^11.0.3",
+    "electron": "^11.5.0",
     "typescript": "^3.9.7"
   },
   "dependencies": {
